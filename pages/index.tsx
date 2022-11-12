@@ -34,7 +34,8 @@ const Home =  ({pageInfo,projects,experiences,skills,socials}:Props) => {
   return (
     <div className='bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory 
     overflow-y-scroll overflow-x-hidden z-0 scrollbar-track-gray-600 scrollbar-thumb-orange-600 scrollbar-thin'>
-      <Head>
+      <>-</>
+      {/* <Head>
         <title>{pageInfo.name} Portfolio</title>
         <meta name="description" content="Portfolio V2" />
         <link rel="icon" href="/favicon.ico" />
@@ -71,31 +72,28 @@ const Home =  ({pageInfo,projects,experiences,skills,socials}:Props) => {
             <img className='rounded-full h-8 w-8 filter grayscale animate-[spin_1.5s_ease-in-out]  hover:grayscale-0 hover:scale-125' src="profile.jpeg" alt="" />
           </div>
         </footer>
-      </Link>
+      </Link> */}
     </div>
   )
 }
 export default Home;
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  const pageInfo: MainInfo = await fetchPageInfo() || null
-  const projects: Project[] = await fetchProjects() || null
-  const experiences: ExperienceBody[] = await fetchExperiences() || null
-  const skills: Skill[] = await fetchSkills() || null
-  const socials: Social[] = await fetchSocials() || null
-  
-  // console.log("From INDEXXXXX E", experiences )
-  // console.log("From INDEXXXXX S", skills )
-  console.log("From INDEXXXXX P", projects )
+// export const getStaticProps: GetStaticProps<Props> = async () => {
+//   const pageInfo: MainInfo = await fetchPageInfo() || null
+//   const projects: Project[] = await fetchProjects() || null
+//   const experiences: ExperienceBody[] = await fetchExperiences() || null
+//   const skills: Skill[] = await fetchSkills() || null
+//   const socials: Social[] = await fetchSocials() || null
 
-  return {
-    props: {
-      pageInfo,
-      projects,
-      experiences,
-      skills,
-      socials
-    },
-    revalidate:10
-  }
-}
+  
+//   return {
+//     props: {
+//       pageInfo,
+//       projects,
+//       experiences,
+//       skills,
+//       socials
+//     },
+//     revalidate:10
+//   }
+// }
