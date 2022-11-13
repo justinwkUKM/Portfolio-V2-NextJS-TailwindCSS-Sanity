@@ -28,8 +28,8 @@ export default function ContactMe({ }: Props) {
         }
     )
     return (
-        <div className='h-screen relative flex flex-col overflow-hidden text-left 
-    md:flex-row max-w-full justify-evenly mx-auto items-center z-0'>
+        <div className='h-screen w-4/5 relative flex flex-col overflow-hidden text-left 
+    md:flex-row md:max-w-full justify-evenly mx-auto items-center z-0'>
             <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>Contact</h3>
             <div className='flex flex-col space-y-10'>
                 <h4 className='text-2xl font-semibold text-center'>
