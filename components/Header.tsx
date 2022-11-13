@@ -25,6 +25,8 @@ function Header({ socials }: Props) {
                     duration: 1
                 }}
                 className='flex flex-row items-center '>
+                <SocialIcon className='hover:animate-[spin_1s_ease-in-out] ' url='#hero' network='vsco' label="Our portfolio" fgColor='gray' bgColor='transparent' />
+                    
                 {socials.map((social, i) => (
                     <SocialIcon className='hover:animate-[spin_1s_ease-in-out] ' key={social._id} url={social.url} fgColor='gray' bgColor='transparent' />
                 ))}
@@ -49,8 +51,9 @@ function Header({ socials }: Props) {
                     }}
                     className='flex text-gray-300 cursor-pointer pr-2 '>
                     <button className='uppercase md:inline-flex font-semibold'>Get in touch</button>
-                    {/* <SocialIcon className='hover:animate-[spin_1s_ease-in-out] ' url='#contactme' fgColor='gray' bgColor='transparent' /> */}
-                    
+                    {/* <SocialIcon className='hover:animate-[spin_1s_ease-in-out] ' url='' fgColor='gray' bgColor='transparent' />
+                    <SocialIcon className='hover:animate-[spin_1s_ease-in-out] ' url='' fgColor='gray' bgColor='transparent' />
+                     */}
                 </motion.div>
             </Link>
 
