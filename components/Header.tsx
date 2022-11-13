@@ -49,7 +49,7 @@ function Header({ socials }: Props) {
                     transition={{
                         duration: 1
                     }}
-                    className='flex text-gray-300 cursor-pointer pr-2 '>
+                    className='flex text-gray-500 cursor-pointer pr-2 '>
                     <button className='uppercase md:inline-flex font-semibold'>Get in touch</button>
                     {/* <SocialIcon className='hover:animate-[spin_1s_ease-in-out] ' url='' fgColor='gray' bgColor='transparent' />
                     <SocialIcon className='hover:animate-[spin_1s_ease-in-out] ' url='' fgColor='gray' bgColor='transparent' />

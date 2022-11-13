@@ -2,8 +2,11 @@ import React from 'react'
 import { PhoneIcon, EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/solid'
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
 import { useForm, SubmitHandler } from "react-hook-form";
+import { MainInfo } from '../typings';
 
-type Props = {}
+type Props = {
+    pageInfo:MainInfo
+}
 type Inputs = {
     name: string,
     email: string,
@@ -11,7 +14,7 @@ type Inputs = {
     message: string,
   };
 
-export default function ContactMe({ }: Props) {
+export default function ContactMe({ pageInfo }: Props) {
     const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>();
     const onSubmit: SubmitHandler<Inputs> = data => {
         window.location.href = `mailto:waqasobeidy@gmail?subject=${data.subject}&body=Hi, my name is ${data.name}. ${data.message}`
@@ -32,7 +35,7 @@ export default function ContactMe({ }: Props) {
     md:flex-row md:max-w-full justify-evenly mx-auto items-center z-0'>
             <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>Contact</h3>
             <div className='flex flex-col space-y-1'>
-                <h4 className='md:text-2xl font-semibold text-center'>
+                <h4 className='md:text-4xl font-semibold text-center md:mb-10'>
                     Find my website interesting? &nbsp;
                     <span className='decoration-amber-600 underline'>
                         Lets {text}!
@@ -41,19 +44,19 @@ export default function ContactMe({ }: Props) {
                 <div className='flex items-center justify-center space-x-5'>
                     <PhoneIcon className='w-5 h-5 md:w-10 md:h-10 text-orange-600 animate-pulse' />
                     <p className='text-sm md:text-2xl'>
-                        +60166442676
+                        {pageInfo.phoneNumber}
                     </p>
                 </div>
                 <div className='flex items-center justify-center space-x-5'>
                     <EnvelopeIcon className='w-5 h-5 md:w-10 md:h-10 text-orange-600 animate-pulse' />
                     <p className='text-sm md:text-2xl'>
-                        waqas@thelorry.com
+                        {pageInfo.email}
                     </p>
                 </div>
                 <div className='flex items-center justify-center space-x-5'>
                     <MapPinIcon className='w-5 h-5 md:w-10 md:h-10 text-orange-600 animate-pulse' />
                     <p className='text-sm md:text-2xl'>
-                        Lot 28, Jalan Puchong Prima, 47150.
+                        {pageInfo.address}
                     </p>
                 </div>
                 <div>
