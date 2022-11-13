@@ -24,12 +24,7 @@ type Props = {
   socials: Social[],
 }
 
-const Home =  ({pageInfo,projects,experiences,skills,socials}:Props) => {
-    // console.log('EXPPPPPP',experiences)
-    // console.log('PROJJJJ',projects)
-    // console.log('SKKKK', skills)
-
-    
+const Home =  ({pageInfo,projects,experiences,skills,socials}:Props) => {    
   return (
     <div className='bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory 
     overflow-y-scroll overflow-x-hidden z-0 scrollbar-track-gray-600 scrollbar-thumb-orange-600 scrollbar-thin'>
