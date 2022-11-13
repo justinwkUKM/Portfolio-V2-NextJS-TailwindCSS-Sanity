@@ -7,7 +7,7 @@ type Props = {
 }
 
 export default function Experience({ experiences }: Props) {
-    console.log(experiences)
+    // console.log(experiences)
     return (
         <motion.div
             initial={{

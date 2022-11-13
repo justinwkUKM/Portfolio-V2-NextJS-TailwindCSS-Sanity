@@ -25,21 +25,21 @@ type Props = {
 }
 
 const Home =  ({pageInfo,projects,experiences,skills,socials}:Props) => {
-    console.log('EXPPPPPP',experiences)
-    console.log('PROJJJJ',projects)
-    console.log('SKKKK', skills)
+    // console.log('EXPPPPPP',experiences)
+    // console.log('PROJJJJ',projects)
+    // console.log('SKKKK', skills)
 
     
   return (
     <div className='bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory 
     overflow-y-scroll overflow-x-hidden z-0 scrollbar-track-gray-600 scrollbar-thumb-orange-600 scrollbar-thin'>
       <Head>
-        <title>{pageInfo.name} Portfolio</title>
+        <title>{pageInfo?.name} Portfolio</title>
         <meta name="description" content="Portfolio V2" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header socials={socials}></Header>
+      <Header socials={socials} pageInfo={pageInfo}></Header>
 
       <section id='hero' className='snap-start'>
         <Hero pageInfo={pageInfo} />

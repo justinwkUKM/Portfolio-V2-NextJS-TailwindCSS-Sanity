@@ -50,6 +50,11 @@ export default {
       type: 'string'
     },
     {
+      name: 'cv',
+      title: 'CV',
+      type: 'url'
+    },
+    {
       name: 'socials',
       title: 'Socials',
       type: 'array',

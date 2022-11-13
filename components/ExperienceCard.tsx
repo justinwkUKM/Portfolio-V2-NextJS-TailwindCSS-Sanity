@@ -6,7 +6,7 @@ type Props = {
 }
 
 export default function ExperienceCard({ experience }: Props) {
-    console.log(experience)
+    // console.log(experience)
     return (
         <article className='flex flex-col  rounded-lg bg-[#292929] justify-center 
         items-center flex-shrink-0 p- w-[500px] 

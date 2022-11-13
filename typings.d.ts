@@ -36,6 +36,7 @@ export interface MainInfo extends SanityBody {
     address: string,
     heroImage: Image,
     profilePic:Image,
+    cv: string,
     socials:Social[],
 }
 
