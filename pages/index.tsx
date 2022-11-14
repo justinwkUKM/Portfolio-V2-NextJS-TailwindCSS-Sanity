@@ -1,4 +1,4 @@
-import {GetStaticProps } from 'next'
+import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -24,7 +24,7 @@ type Props = {
   socials: Social[],
 }
 
-const Home =  ({pageInfo,projects,experiences,skills,socials}:Props) => {    
+const Home = ({ pageInfo, projects, experiences, skills, socials }: Props) => {
   return (
     <div className='bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory 
     overflow-y-scroll overflow-x-hidden z-0 scrollbar-track-gray-600 scrollbar-thumb-orange-600 scrollbar-thin'>
@@ -40,21 +40,32 @@ const Home =  ({pageInfo,projects,experiences,skills,socials}:Props) => {
         <Hero pageInfo={pageInfo} />
       </section>
 
-      <section id='about' className='snap-center'>
-        <About pageInfo={pageInfo} />
-      </section>
+      {process.env.NEXT_PUBLIC_ENV == 'local' ?
+        <section id='about' className='snap-center'>
+          <About pageInfo={pageInfo} />
+        </section> : <></>
+      }
 
-      <section id='experience' className='snap-center'>
-        <Experience experiences={experiences} />
-      </section>
+      {process.env.NEXT_PUBLIC_ENV == 'local' ?
+        <section id='experience' className='snap-center'>
+          <Experience experiences={experiences} />
+        </section> : <></>
+      }
+      {process.env.NEXT_PUBLIC_ENV == 'local' ?
+        <section id='projects' className='snap-center'>
+          <Projects projects={projects} />
+        </section> : <></>
+      }
+
+
+
+
 
       <section id='skills' className='snap-center'>
         <Skills skills={skills} />
       </section>
 
-      <section id='projects' className='snap-center'>
-        <Projects projects={projects} />
-      </section>
+
 
       <section id='contactme' className='snap-center'>
         <ContactMe pageInfo={pageInfo} />
@@ -78,7 +89,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   const skills: Skill[] = await fetchSkills() || null
   const socials: Social[] = await fetchSocials() || null
 
-  
+
   return {
     props: {
       pageInfo,
@@ -87,6 +98,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       skills,
       socials
     },
-    revalidate:10
+    revalidate: 10
   }
 }
