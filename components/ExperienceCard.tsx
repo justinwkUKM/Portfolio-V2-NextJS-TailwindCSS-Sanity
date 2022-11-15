@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { ExperienceBody } from '../typings'
+import { urlFor } from '../sanity'
 type Props = {
     experience: ExperienceBody
 }
@@ -8,10 +9,10 @@ type Props = {
 export default function ExperienceCard({ experience }: Props) {
     // console.log(experience)
     return (
-        <article className='flex flex-col  rounded-lg bg-[#292929] justify-center 
-        items-center flex-shrink-0 p- w-[500px] 
+        <article className='flex flex-col  rounded-lg bg-gray-200 dark:bg-[#292929] justify-center 
+        items-center flex-shrink-0 p-2 w-[500px] 
         md:w-[600px] xl:w-[900px] snap-center 
-        opacity-50 hover:opacity-100 cursor-pointer transition-opacity 
+        opacity-70 hover:opacity-100 cursor-pointer transition-opacity 
         duration-200 overflow-hidden'>
             <motion.img
                 initial={{
@@ -33,15 +34,16 @@ export default function ExperienceCard({ experience }: Props) {
                 alt='profile'
             />
             <div className='px-0 md:px-10 flex flex-col justify-center items-center'>
-                <h4 className='text-2xl xl:text-4xl font-bold py-1 mt-2'>{experience.jobTitle}</h4>
-                <h4 className='text-xl xl:text-2xl font-semibold py-1'>{experience.company}</h4>
+                <h4 className='text-2xl xl:text-4xl text-gray-500 font-bold py-1 mt-2'>{experience.jobTitle}</h4>
+                <h4 className='text-xl xl:text-2xl text-gray-500 font-semibold py-1'>{experience.company}</h4>
                 <div className='flex space-x-2 my-2 items-center justify-center'>
-                    {experience.skills.map((skill, i) => (<img key={skill._id} className='w-7 h-7 md:w-10 md:h-10 rounded-full bg-yellow-400 object-cover' src='vercel.svg'></img>))}
+                    {experience.skills.map((skill, i) => (<img key={skill._id} className='w-7 h-7 md:w-10 md:h-10 rounded-full bg-yellow-400 object-cover' 
+                    src={urlFor(skill?.image).url()}></img>))}
                 </div>
                 <p className='uppercase py-5 text-gray-500 text-sm md:text:xl'>
                     {new Date(experience?.dateStarted).toDateString()} - {experience.isCurrentlyWorkingHere ? "Present" : new Date(experience?.dateEnded).toDateString()}
                 </p>
-                <ul className='list-disc space-y-4 ml-5 text-sm md:text-lg text-left max-h-44  overflow-y-scroll scrollbar-thin scrollbar-track-slate-500 '>
+                <ul className='list-disc space-y-4 ml-5 text-sm text-gray-500 md:text-lg text-left max-h-44  overflow-y-scroll scrollbar-thin scrollbar-track-slate-500 '>
                     {experience?.points?.map((point, i) => (
                     <li key={i} className='text-sm'>
                         {point}

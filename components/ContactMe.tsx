@@ -35,7 +35,7 @@ export default function ContactMe({ pageInfo }: Props) {
     md:flex-row md:max-w-full justify-evenly mx-auto items-center z-0'>
             <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>Contact</h3>
             <div className='flex flex-col space-y-1'>
-                <h4 className='md:text-4xl font-semibold text-center md:mb-10'>
+                <h4 className='md:text-4xl font-semibold dark:text-gray-200 text-gray-600 text-center md:mb-10'>
                     Find my website interesting? &nbsp;
                     <span className='decoration-amber-600 underline'>
                         Lets {text}!
@@ -43,19 +43,19 @@ export default function ContactMe({ pageInfo }: Props) {
                 </h4>
                 <div className='flex items-center justify-center space-x-5'>
                     <PhoneIcon className='w-5 h-5 md:w-10 md:h-10 text-orange-600 animate-pulse' />
-                    <p className='text-sm md:text-2xl'>
+                    <p className='text-sm dark:text-gray-200 text-gray-600 md:text-2xl'>
                         {pageInfo.phoneNumber}
                     </p>
                 </div>
                 <div className='flex items-center justify-center space-x-5'>
                     <EnvelopeIcon className='w-5 h-5 md:w-10 md:h-10 text-orange-600 animate-pulse' />
-                    <p className='text-sm md:text-2xl'>
+                    <p className='text-sm dark:text-gray-200 text-gray-600 md:text-2xl'>
                         {pageInfo.email}
                     </p>
                 </div>
                 <div className='flex items-center justify-center space-x-5'>
                     <MapPinIcon className='w-5 h-5 md:w-10 md:h-10 text-orange-600 animate-pulse' />
-                    <p className='text-sm md:text-2xl'>
+                    <p className='text-sm  dark:text-gray-200 text-gray-600 md:text-2xl'>
                         {pageInfo.address}
                     </p>
                 </div>

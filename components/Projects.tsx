@@ -50,7 +50,7 @@ export default function Projects({ projects }: Props) {
 
                             className='rounded-lg max-h-48 max-w-48' src={urlFor(project?.image).url()} alt='' />
                         <div>
-                            <h4 className='text-2xl text-center font-semibold'>
+                            <h4 className='text-2xl text-center dark:text-gray-200 text-gray-600 font-semibold'>
                                 <span className='underline'>
                                     Case Study {i + 1} of {projects.length}:
                                 </span>
@@ -65,7 +65,7 @@ export default function Projects({ projects }: Props) {
 
                             </div>
 
-                            <h4 className='mt-5 '>
+                            <h4 className='mt-5 dark:text-gray-200 text-gray-600 '>
                                 {project?.summary}
                             </h4>
                         </div>

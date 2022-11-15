@@ -46,10 +46,10 @@ function About({pageInfo }: Props) {
             </motion.img>
             <div className='space-y-10 px-5 md:px:10'>
 
-                <h2 className='text-4xl font-semibold text-gray-300' >
+                <h2 className='text-4xl font-semibold dark:text-gray-200 text-gray-600' >
                     Here is <span className='underline decoration-yellow-700'>{text}</span> background
                 </h2>
-                <p className='text-gray-400 text-justify text-sm md:text-lg'>{pageInfo?.backgroundInformation}</p>
+                <p className=' text-justify dark:text-gray-200 text-gray-600 text-sm md:text-lg'>{pageInfo?.backgroundInformation}</p>
             </div>
         </div>
     )

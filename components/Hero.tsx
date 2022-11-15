@@ -23,14 +23,14 @@ function Hero({ pageInfo }: Props) {
     return (
         <div className='flex  flex-col justify-center items-center h-screen text-center overflow-hidden'>
             <BackgroundCircles></BackgroundCircles>
-            <img className='mb-1 relative rounded-full h-32 w-32 max-auto bg-red-400 p-1 object-cover '
+            <img className='mb-1 relative rounded-full h-32 w-32 max-auto  object-cover hover:scale-125  dark:border-orange-600 border-orange-600 hover:border-4'
                 src={urlFor(pageInfo?.heroImage).url()}
                 alt='profile-photo-on-hero'>
             </img>
             <div className='z-20'>
 
-                <h2 className='text-sm uppercase text-gray-400 p-4 tracking-[15px]'>{pageInfo?.role}</h2>
-                <h1 className='text-gray-100 text-4xl lg:text-5xl font-semibold px-10'>
+                <h2 className='text-sm uppercase  dark:text-gray-400 text-gray-400 p-4 tracking-[15px]'>{pageInfo?.role}</h2>
+                <h1 className='dark:text-gray-200 text-gray-600 text-4xl lg:text-5xl font-semibold px-10'>
                     <span className=''>
                         {text}
                     </span>
