@@ -16,7 +16,6 @@ function About({pageInfo }: Props) {
                 "some"],
             delaySpeed: 2000,
             loop: true,
-
         }
     )
     return (

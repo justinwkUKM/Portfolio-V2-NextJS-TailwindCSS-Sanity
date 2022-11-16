@@ -18,12 +18,11 @@ function BackgroundCircles({ }: Props) {
             duration:2.5
         }}
 
-        className='relative flex justify-center items-center z-0'>
-            <div className='absolute border border-orange-400/40 dark:border-gray-700 rounded-full h-[100px] w-[100px] mt-52 animate-ping ' />
-            <div className='absolute border border-orange-400/40 dark:border-gray-700 rounded-full h-[200px] w-[200px] mt-52 animate-ping ' />
-            <div className='absolute border border-orange-400/40 dark:border-gray-700 rounded-full h-[300px] w-[300px] mt-52 animate-ping ' />
-            <div className='absolute border border-orange-400 dark:border-yellow-800 rounded-full h-[650px] w-[650px] mt-52 animate-pulse' />
-
+        className='relative group flex justify-center items-center z-0'>
+            <div className='absolute border group-hover:border-2  border-orange-400/40 dark:border-gray-700 rounded-full h-[100px] w-[100px] mt-52 animate-ping ' />
+            <div className='absolute border group-hover:border-2 border-orange-400/40 dark:border-gray-700 rounded-full h-[200px] w-[200px] mt-52 animate-ping ' />
+            <div className='absolute border group-hover:border-2 border-orange-400/40 dark:border-gray-700 rounded-full h-[300px] w-[300px] mt-52 animate-ping ' />
+            <div className='absolute border group-hover:border-4 border-orange-400 dark:border-yellow-800 rounded-full h-[650px] w-[650px] mt-52 animate-pulse' />
         </ motion.div>
     )
 }
