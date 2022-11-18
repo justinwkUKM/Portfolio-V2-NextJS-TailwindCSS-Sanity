@@ -17,7 +17,7 @@ type Inputs = {
 export default function ContactMe({ pageInfo }: Props) {
     const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>();
     const onSubmit: SubmitHandler<Inputs> = data => {
-        window.location.href = `mailto:waqasobeidy@gmail?subject=${data.subject}&body=Hi, my name is ${data.name}. ${data.message}`
+        window.location.href = `mailto:waqasobeidy@gmail?subject=FWB-${data.subject}&body=Hi, my name is ${data.name}. ${data.message}`
     };
     // console.log(watch("example")) // watch input value by passing the name of it
     const [text, count] = useTypewriter(
@@ -62,8 +62,8 @@ export default function ContactMe({ pageInfo }: Props) {
                 <div>
                     <form className='flex flex-col items-start space-y-2 w-full mx-auto' onSubmit={handleSubmit(onSubmit)}>
                         <div className='flex flex-col md:flex-row md:justify-evenly space-x-0 space-y-2 md:space-x-2 md:space-y-0 w-full '>
-                            <input {...register('name')} placeholder='Name' className='contactInput md:w-full rounded' type="text" />
-                            <input {...register('email')} placeholder='Email' className='contactInput md:w-full rounded' type="email" />
+                            <input {...register('name')} placeholder='Name' className='contactInput md:w-full rounded' type="text"  />
+                            <input {...register('email')} placeholder='Email' className='contactInput md:w-full rounded hidden' type="email" value="waqasobeidy@gmail.com"/>
                         </div>
                         <input {...register('subject')} placeholder='Subject' className='contactInput w-4/5 md:w-full rounded' type="text" />
                         <textarea {...register('message')} placeholder='Message' className='contactInput w-4/5 md:w-full rounded' />
