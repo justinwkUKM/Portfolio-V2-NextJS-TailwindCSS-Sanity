@@ -29,8 +29,8 @@ export default function ExperienceCard({ experience }: Props) {
                 transition={{
                     duration: 1
                 }}
-                className='w-20 h-20 rounded-full xl:w-[100px] xl:h-[100px] object-cover object-center'
-                src='profile.jpeg'
+                className='w-20 h-20 rounded-full xl:w-[100px] xl:h-[100px] object-cover object-center animate-wiggle-3s'
+                src={urlFor(experience?.companyImage).url()}
                 alt='profile'
             />
             <div className='px-0 md:px-10 flex flex-col justify-center items-center'>

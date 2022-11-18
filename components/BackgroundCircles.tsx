@@ -18,7 +18,7 @@ function BackgroundCircles({ }: Props) {
             duration:2.5
         }}
 
-        className='relative group flex justify-center items-center z-0'>
+        className='relative group flex justify-center items-center z-1'>
             <div className='absolute border group-hover:border-2  border-orange-400/40 dark:border-gray-700 rounded-full h-[100px] w-[100px] mt-52 animate-ping ' />
             <div className='absolute border group-hover:border-2 border-orange-400/40 dark:border-gray-700 rounded-full h-[200px] w-[200px] mt-52 animate-ping ' />
             <div className='absolute border group-hover:border-2 border-orange-400/40 dark:border-gray-700 rounded-full h-[300px] w-[300px] mt-52 animate-ping ' />

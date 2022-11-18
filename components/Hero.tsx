@@ -4,6 +4,7 @@ import { Cursor, useTypewriter } from 'react-simple-typewriter'
 import { urlFor } from '../sanity'
 import { MainInfo } from '../typings'
 import BackgroundCircles from './BackgroundCircles'
+import BackgroundSquares from './BackgroundSquares'
 
 type Props = {
     pageInfo: MainInfo
@@ -22,11 +23,15 @@ function Hero({ pageInfo }: Props) {
     )
     return (
         <div className='flex  flex-col justify-center items-center h-screen text-center overflow-hidden'>
-            <BackgroundCircles></BackgroundCircles>
-            <img className='mb-1 relative rounded-full h-32 w-32 max-auto  object-cover hover:scale-125  dark:border-orange-600 border-orange-600 hover:border-4'
-                src={urlFor(pageInfo?.heroImage).url()}
-                alt='profile-photo-on-hero'>
-            </img>
+            {/* <BackgroundCircles></BackgroundCircles> */}
+            <BackgroundSquares></BackgroundSquares>
+            <div className='hover:scale-125'>
+
+                <img className='mb-1 relative rounded-full h-32 w-32 max-auto  object-cover   dark:border-orange-600 border-orange-600 hover:border-4 hover:scale-125 animate-wiggle-3s'
+                    src={urlFor(pageInfo?.heroImage).url()}
+                    alt='profile-photo-on-hero'>
+                </img>
+            </div>
             <div className='z-20'>
 
                 <h2 className='text-sm uppercase  dark:text-gray-400 text-gray-400 p-4 tracking-[15px]'>{pageInfo?.role}</h2>
@@ -53,7 +58,9 @@ function Hero({ pageInfo }: Props) {
                         <button className='heroButton'>Download CV</button>
 
                     </Link>
+
                 </div>
+
             </div>
         </div>
     )
