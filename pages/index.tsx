@@ -43,17 +43,13 @@ const Home = ({ pageInfo, projects, experiences, skills, socials }: Props) => {
         <Hero pageInfo={pageInfo} />
       </section>
 
-      {process.env.NEXT_PUBLIC_ENV == 'local' ?
-        <section id='about' className='snap-center'>
-          <About pageInfo={pageInfo} />
-        </section> : <></>
-      }
+      <section id='about' className='snap-center'>
+        <About pageInfo={pageInfo} />
+      </section>
 
-      {process.env.NEXT_PUBLIC_ENV == 'local' ?
-        <section id='experience' className='snap-center'>
-          <Experience experiences={experiences} />
-        </section> : <></>
-      }
+      <section id='experience' className='snap-center'>
+        <Experience experiences={experiences} />
+      </section>
       {process.env.NEXT_PUBLIC_ENV == 'local' ?
         <section id='projects' className='snap-center'>
           <Projects projects={projects} />

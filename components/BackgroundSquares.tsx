@@ -25,7 +25,7 @@ function BackgroundSquares({ }: Props) {
              animate-ping ' />
             <div className='absolute border group-hover:border-2 border-gray-400/30 dark:border-gray-700 rounded-lg h-[250px] w-[500px] mt-60
              animate-ping ' />
-            <div className='absolute border-2 group-hover:border-4 border-orange-300 dark:border-yellow-800 rounded-lg h-[500px] w-[1200px] mt-60
+            <div className='absolute hidden md:inline-flex md:visible border-2 group-hover:border-4 border-orange-300 dark:border-yellow-800 rounded-lg h-[500px] w-[1200px] mt-60
              animate-pulse' />
         </ motion.div>
     )
