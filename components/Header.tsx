@@ -49,17 +49,17 @@ function Header({ socials, pageInfo }: Props) {
                     scale: 1
                 }}
                 transition={{
-                    duration: 1
+                    duration: 1.5
                 }}
                 className='flex flex-row items-center '>
                 
                 <div className='md:inline-flex  hidden md:visible '>
-                    <SocialIcon className='hover:animate-[spin_1s_ease-in-out] hover:bg-orange-400  dark:hover:bg-gray-200 rounded-full' url='#hero' network='vsco' label="Our portfolio" fgColor='gray' bgColor='transparent' />
+                    <SocialIcon className='hover:animate-[spin_1s_ease-in-out] hover:bg-orange-400  dark:hover:bg-gray-200 rounded-full animate-wiggle-3s' url='#hero' network='vsco' label="Our portfolio" fgColor='gray' bgColor='transparent' />
                 </div>
                 <div className=''>
 
                     {socials.map((social, i) => (
-                        <SocialIcon className='hover:animate-[spin_1s_ease-in-out] hover:bg-orange-400  dark:hover:bg-gray-200  rounded-full' key={social._id} url={social.url} fgColor='gray' bgColor='transparent' />
+                        <SocialIcon className='hover:animate-[spin_1s_ease-in-out] hover:bg-orange-400  dark:hover:bg-gray-200  rounded-full animate-wiggle-3s' key={social._id} url={social.url} fgColor='gray' bgColor='transparent' />
                     ))}
                 </div>
 
@@ -80,11 +80,11 @@ function Header({ socials, pageInfo }: Props) {
                         scale: 1
                     }}
                     transition={{
-                        duration: 1
+                        duration: 1.5
                     }}
                     className='flex text-gray-500 cursor-pointer pr-2 space-x-2 '>
                     <button className='uppercase md:inline-flex font-semibold hidden md:visible hover:scale-110'>CV</button>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 text-gray-500 hover:animate-bounce hover:text-orange-300 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 text-gray-500 hover:animate-bounce hover:text-orange-300 animate-wiggle-3s">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
                     </svg>
                 </motion.div>
@@ -106,11 +106,11 @@ function Header({ socials, pageInfo }: Props) {
                             scale: 1
                         }}
                         transition={{
-                            duration: 1
+                            duration: 1.5
                         }}
                         className='flex text-gray-500 cursor-pointer pr-2 space-x-2 hover:scale-110 '>
                         <button className='uppercase md:inline-flex font-semibold hidden md:visible'>Get in touch</button>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 text-gray-500 hover:animate-[spin_1s_ease-in-out] hover:text-orange-300 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 text-gray-500 hover:animate-[spin_1s_ease-in-out] hover:text-orange-300 animate-wiggle-3s">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
                         </svg>
                     </motion.div>
