@@ -39,7 +39,7 @@ function About({pageInfo }: Props) {
                 transition={{
                     duration: 1
                 }}
-                className='-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 object-cover  rounded-full md:rounded-lg hover:border-4 hover:border-orange-500 hover:animate-wiggle-3s'
+                className='-mb-20 md:mb-0 flex-shrink-0 w-24 h-24 md:w-56 md:h-56 object-cover  rounded-full md:rounded-lg hover:border-4 hover:border-orange-500 hover:animate-wiggle-3s'
                 src={urlFor(pageInfo?.profilePic).url()} >
 
             </motion.img>
