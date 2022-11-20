@@ -2,7 +2,7 @@
 
 Frontend is built using NEXTJS, ISR, tailwindcss, next-pwa, next-themes & framer-motion animations. 
 
-Backend is built using Sanity.io. You will need a free plan to run this.
+Backend is built using Sanity.io. You will just need a free plan to run this.
 
 # Running the code
 Setup : 
@@ -24,4 +24,6 @@ Setup :
 
 Deployment:
 Frontend can be deployed on vercel for free (Thank you @Vercel Team). My deployment is at https://waqasobeidy.com. Reach out to me if you need help.
+
+#Feel free to use this and modify it as per your preference. 
 
