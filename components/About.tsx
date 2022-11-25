@@ -22,7 +22,7 @@ function About({pageInfo }: Props) {
         <div
             className='h-screen flex flex-col relative text-center md:text-left md:flex-row px-10 max-w-7xl justify-evenly mx-auto items-center'
         >
-            <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-sm md:text-2xl '>About</h3>
+            <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500  md:text-2xl '>About</h3>
 
             <motion.img
                 initial={{
@@ -39,11 +39,11 @@ function About({pageInfo }: Props) {
                 transition={{
                     duration: 1
                 }}
-                className='-mb-20 md:mb-0 flex-shrink-0 w-24 h-24 md:w-56 md:h-56 object-cover  rounded-full md:rounded-lg hover:border-4 hover:border-orange-500 hover:animate-wiggle-3s'
+                className='-mb-20 md:mb-0 flex-shrink-0 w-36 h-36 md:w-56 md:h-56 object-cover rounded-full md:rounded-lg hover:border-4 hover:border-orange-500 hover:animate-wiggle-3s'
                 src={urlFor(pageInfo?.profilePic).url()} >
 
             </motion.img>
-            <div className='mt-6 space-y-10 px-5 md:px:10'>
+            <div className='mt-2 space-y-10 px-5 md:px:10'>
 
                 <h2 className='text-lg md:text-4xl font-semibold dark:text-gray-200 text-gray-600' >
                     Here is <span className='underline decoration-yellow-700'>{text}</span> background
