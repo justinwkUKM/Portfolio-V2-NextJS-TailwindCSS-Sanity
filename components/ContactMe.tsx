@@ -33,7 +33,7 @@ export default function ContactMe({ pageInfo }: Props) {
     return (
         <div className='h-screen w-4/5 relative flex flex-col overflow-hidden text-left 
     md:flex-row md:max-w-full justify-evenly mx-auto items-center z-0'>
-            <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>Contact</h3>
+            <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-sm md:text-2xl'>Contact</h3>
             <div className='flex flex-col space-y-1'>
                 <h4 className='md:text-4xl font-semibold dark:text-gray-200 text-gray-600 text-center md:mb-10'>
                     Find my website interesting? &nbsp;

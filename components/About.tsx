@@ -22,7 +22,7 @@ function About({pageInfo }: Props) {
         <div
             className='h-screen flex flex-col relative text-center md:text-left md:flex-row px-10 max-w-7xl justify-evenly mx-auto items-center'
         >
-            <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>About</h3>
+            <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-sm md:text-2xl '>About</h3>
 
             <motion.img
                 initial={{
@@ -43,9 +43,9 @@ function About({pageInfo }: Props) {
                 src={urlFor(pageInfo?.profilePic).url()} >
 
             </motion.img>
-            <div className='space-y-10 px-5 md:px:10'>
+            <div className='mt-6 space-y-10 px-5 md:px:10'>
 
-                <h2 className='text-4xl font-semibold dark:text-gray-200 text-gray-600' >
+                <h2 className='text-lg md:text-4xl font-semibold dark:text-gray-200 text-gray-600' >
                     Here is <span className='underline decoration-yellow-700'>{text}</span> background
                 </h2>
                 <p className=' text-justify dark:text-gray-200 text-gray-600 text-sm md:text-lg'>{pageInfo?.backgroundInformation}</p>
