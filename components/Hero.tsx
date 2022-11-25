@@ -35,7 +35,7 @@ function Hero({ pageInfo }: Props) {
             <div className='z-20'>
 
                 <h2 className='text-sm uppercase  dark:text-gray-400 text-gray-400 p-4 tracking-[15px]'>{pageInfo?.role}</h2>
-                <h1 className='dark:text-gray-200 text-gray-600 text-2xl md:text-4xl lg:text-5xl font-semibold px-10'>
+                <h1 className='dark:text-gray-200 text-gray-600 text-3xl md:text-4xl lg:text-5xl font-semibold px-10 py-10'>
                     <span className=''>
                         {text}
                     </span>
