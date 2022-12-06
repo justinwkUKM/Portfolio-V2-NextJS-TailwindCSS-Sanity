@@ -11,7 +11,7 @@ export default function ExperienceCard({ experience }: Props) {
     return (
         <motion.article 
         initial={{
-            x: -200,
+            x: 0,
             opacity: 0
         }}
         whileInView={{
