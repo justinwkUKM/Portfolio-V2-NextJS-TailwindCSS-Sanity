@@ -13,6 +13,10 @@ module.exports = {
           '0%, 100%': { transform: 'rotate(-5deg)' },
           '50%': { transform: 'rotate(5deg)' },
         },
+        wiggle1d: {
+          '0%, 100%': { transform: 'rotate(-5deg)' },
+          '50%': { transform: 'rotate(5deg)' },
+        },
         wiggle3d: {
           '0%, 100%': { transform: 'rotate(-1deg)' },
           '50%': { transform: 'rotate(1deg)' },
@@ -23,6 +27,8 @@ module.exports = {
         'bounce-slow': 'bounce 3s linear infinite',
         'wiggle': 'wiggle 1s ease-in-out infinite',
         'wiggle-3s': 'wiggle3d 3s ease-in-out infinite',
+        'wiggle-2s': 'wiggle1d 2s ease-in-out infinite',
+
 
       }
     },

@@ -12,7 +12,7 @@ export default function Skill({ directionLeft, skill }: Props) {
 
         <div className='group flex flex-col justify-center items-center '>
 
-            <div className='group relative flex cursor-pointer hover:animate-wiggle-3s'>
+            <div className='group relative flex cursor-pointer hover:animate-wiggle'>
                 <motion.img
                     initial={{
                         // x: directionLeft ? -200 : 200,
@@ -46,7 +46,7 @@ export default function Skill({ directionLeft, skill }: Props) {
             </div>
             <motion.div
                     initial={{
-                        y:-150,
+                        y:100,
                         opacity: 0
                     }}
                     whileInView={{
@@ -56,8 +56,8 @@ export default function Skill({ directionLeft, skill }: Props) {
                     }}
                     
                     transition={{
-                        duration: 0.5
-                    }} className='text-gray-500 hidden group-hover:inline-flex group-hover:visible group-hover:opacity-70 ease-in-out duration-300'>
+                        duration: 1
+                    }} className='text-gray-500 hidden group-hover:inline-flex group-hover:visible group-hover:opacity-70 ease-in-out duration-100'>
                 <h1 className='text-xs'>{skill.title}</h1>
             </motion.div>
         </div>
