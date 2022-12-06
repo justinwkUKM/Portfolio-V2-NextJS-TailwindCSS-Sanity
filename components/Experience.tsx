@@ -11,12 +11,12 @@ export default function Experience({ experiences }: Props) {
     return (
         <motion.div
             initial={{
-                x: -300,
-                // opacity: 0
+                x: 0,
+                opacity: 0
             }}
             whileInView={{
                 x: 0,
-                // opacity: 1
+                opacity: 1
             }}
             viewport={{
                 once: true,
