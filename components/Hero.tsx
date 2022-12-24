@@ -54,9 +54,11 @@ function Hero({ pageInfo }: Props) {
                         <button className='heroButton'>Skills</button>
 
                     </Link>
+                    <Link href='/resume'>
+                        <button className='heroButton'>CV</button>
+                    </Link>
                     <Link href={pageInfo?.cv}>
                         <button className='heroButton'>Download CV</button>
-
                     </Link>
 
                 </div>
