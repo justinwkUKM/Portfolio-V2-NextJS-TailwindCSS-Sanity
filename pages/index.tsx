@@ -66,7 +66,7 @@ const Home = ({ pageInfo, projects, experiences, skills, socials }: Props) => {
       <Link href={'#hero'}>
         <footer className='sticky bottom-5 w-full cursor-pointer'>
           <div className='flex items-center justify-center'>
-            <img className='rounded-full h-8 w-8 filter grayscale animate-[spin_1.5s_ease-in-out]  hover:grayscale-0 hover:scale-125' src="profile.jpeg" alt="" />
+            <img className='rounded-lg h-8 w-8 filter grayscale animate-[spin_1.5s_ease-in-out]  hover:grayscale-0 hover:scale-125' src="profile.jpeg" alt="profile-waqas-khalid-obeidy" />
           </div>
         </footer>
       </Link>
@@ -76,11 +76,11 @@ const Home = ({ pageInfo, projects, experiences, skills, socials }: Props) => {
 export default Home;
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const pageInfo: MainInfo = await fetchPageInfo() || null
-  const projects: Project[] = await fetchProjects() || null
-  const experiences: ExperienceBody[] = await fetchExperiences() || null
-  const skills: Skill[] = await fetchSkills() || null
-  const socials: Social[] = await fetchSocials() || null
+  const pageInfo: MainInfo = await fetchPageInfo() 
+  const projects: Project[] = await fetchProjects() 
+  const experiences: ExperienceBody[] = await fetchExperiences() 
+  const skills: Skill[] = await fetchSkills() 
+  const socials: Social[] = await fetchSocials() 
 
 
   return {

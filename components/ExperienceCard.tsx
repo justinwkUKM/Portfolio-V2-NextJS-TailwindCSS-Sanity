@@ -35,7 +35,7 @@ export default function ExperienceCard({ experience }: Props) {
                     
                     className='w-28 h-28 rounded-full xl:w-[100px] xl:h-[100px] object-cover object-center  animate-wiggle-3s'
                     src={urlFor(experience?.companyImage).url()}
-                    alt='profile'
+                    alt='profile-waqas-khalid-obeidy'
                 />
             </div>
             <div className='px-0 md:px-10 flex flex-col justify-center items-center'>

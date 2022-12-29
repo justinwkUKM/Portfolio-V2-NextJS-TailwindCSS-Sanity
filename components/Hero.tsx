@@ -27,9 +27,9 @@ function Hero({ pageInfo }: Props) {
             <BackgroundSquares></BackgroundSquares>
             <div className='hover:scale-125'>
 
-                <img className='mb-1 relative rounded-full h-32 w-32 max-auto  object-cover   dark:border-orange-600 border-orange-600 hover:border-4 hover:scale-125 animate-wiggle-3s'
+                <img className='mb-1 relative rounded-lg h-32 w-32 max-auto  object-cover   dark:border-orange-600 border-orange-600 hover:border-4 hover:scale-125 animate-wiggle-3s'
                     src={urlFor(pageInfo?.heroImage).url()}
-                    alt='profile-photo-on-hero'>
+                    alt='profile-waqas-khalid-obeidy'>
                 </img>
             </div>
             <div className='z-20'>

@@ -48,7 +48,7 @@ export default function Projects({ projects }: Props) {
                             }}
 
 
-                            className='rounded-lg max-h-48 max-w-4 hover:border-4 hover:border-orange-500 hover:animate-wiggle-3s' src={urlFor(project?.image).url()} alt='' />
+                            className='rounded-lg max-h-48 max-w-4 hover:border-4 hover:border-orange-500 hover:animate-wiggle-3s' src={urlFor(project?.image).url()} alt='profile-waqas-khalid-obeidy' />
                         <div>
                             <h4 className='text-2xl text-center dark:text-gray-200 text-gray-600 font-semibold'>
                                 <span className='underline'>
